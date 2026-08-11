@@ -400,178 +400,176 @@
       </p>
 
       <!-- LUCCI -->
-      <article class="case">
-        <div class="case-top">
-          <svg class="case-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="4" rx="1"/><rect x="3" y="10" width="18" height="4" rx="1"/><rect x="3" y="16" width="18" height="4" rx="1"/></svg>
-          <div class="case-flag"><span class="dot"></span> FLAGSHIP PROJECT — LIVE</div>
-          <h3>LUCCI — an e-commerce platform, and the cost decision behind keeping it alive</h3>
-          <p class="case-desc">
- Designed and developed a production-ready cloud-native e-commerce platform using a microservices architecture with independent services. Built secure REST APIs with JWT-based authentication, product catalog management, order processing, Razorpay payment integration, asynchronous payment processing using Amazon SQS, and automated CI/CD pipelines with Docker, Jenkins, Amazon ECR, and Amazon ECS Fargate. Configured Amazon RDS MySQL, Application Load Balancer, CloudFront, Route 53, and AWS Certificate Manager (ACM) for a scalable and production-ready deployment on AWS.</p>  
-          <div class="case-links">
-            <a href="https://frontend-aws-devops-1.vercel.app" target="_blank" class="live">Live demo ↗</a>
-            <a href="https://github.com/rozanaim2026/frontend-aws-devops" target="_blank">frontend-aws-devops</a>
-            <a href="https://github.com/rozanaim2026/user-service" target="_blank">user-service</a>
-            <a href="https://github.com/rozanaim2026/product-service" target="_blank">product-service</a>
-            <a href="https://github.com/rozanaim2026/order-service" target="_blank">order-service</a>
-            <a href="https://github.com/rozanaim2026/payment-service" target="_blank">payment-service</a>
-          </div>
-        </div>
-        <div class="case-body">
-          <div class="flow problem">
-            <h4>What I was solving for</h4>
-            <ul>
-              <li>Traditional monolithic e-commerce applications become difficult to scale, maintain, and deploy as different business modules evolve independently.</li>
-    <li>Needed a production-ready cloud architecture capable of handling secure authentication, product management, order processing, and payment workflows through independently deployable microservices.</li>
-    <li>Wanted to implement an end-to-end DevOps workflow with automated CI/CD, containerization, and AWS infrastructure similar to real-world production environments.</li>
- </ul>
-          </div>
-          <div class="flow decision">
-            <h4>What I built</h4>
-            <ul>
-              <li>Built four independent microservices—User, Product, Order, and Payment—using Node.js, Express.js, Docker, and MySQL, communicating through secure REST APIs.</li>
-              <li>Implemented JWT authentication, role-based authorization, Razorpay payment integration, Amazon SQS-based asynchronous payment processing, Amazon SES email notifications, and transaction-based order management.</li>
-              <li>Automated deployment using Jenkins, Docker, Amazon ECR, and Amazon ECS Fargate with Application Load Balancer routing, Amazon RDS MySQL, CloudFront, Route 53, and ACM for a production-ready cloud    deployment.</li>
+<article class="case">
+  <div class="case-top">
+    <svg class="case-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="4" rx="1"/><rect x="3" y="10" width="18" height="4" rx="1"/><rect x="3" y="16" width="18" height="4" rx="1"/></svg>
+    <div class="case-flag"><span class="dot"></span> FLAGSHIP PROJECT — LIVE</div>
+    <h3>LUCCI — an e-commerce platform, and the architectural decisions behind keeping it scalable</h3>
+    <p class="case-desc">
+      Designed and developed a production-ready, cloud-native e-commerce platform using a microservices architecture. Built secure REST APIs with JWT-based authentication, product catalog management, order processing, Razorpay payment integration, asynchronous payment processing using Amazon SQS, and automated CI/CD pipelines with Docker, Jenkins, Amazon ECR, and Amazon ECS Fargate. Configured Amazon RDS MySQL, Application Load Balancers, CloudFront, Route 53, and AWS Certificate Manager (ACM) for a secure, highly available deployment.
+    </p>  
+    <div class="case-links">
+      <a href="https://vercel.app" target="_blank" class="live">Live demo ↗</a>
+      <a href="https://github.com" target="_blank">frontend-aws-devops</a>
+      <a href="https://github.com" target="_blank">user-service</a>
+      <a href="https://github.com" target="_blank">product-service</a>
+      <a href="https://github.com" target="_blank">order-service</a>
+      <a href="https://github.com" target="_blank">payment-service</a>
+    </div>
+  </div>
+  <div class="case-body">
+    <div class="flow problem">
+      <h4>What I was solving for</h4>
+      <ul>
+        <li>Traditional monolithic applications become rigid, complex, and difficult to scale as business modules evolve independently.</li>
+        <li>Needed a secure, production-ready cloud architecture capable of handling independent authentication, order processing, and payment workflows.</li>
+        <li>Wanted to implement a real-world DevOps workflow with end-to-end automated pipelines, container orchestration, and isolated staging environments.</li>
+      </ul>
+    </div>
+    <div class="flow decision">
+      <h4>What I built</h4>
+      <ul>
+        <li>Engineered four decoupled microservices (User, Product, Order, Payment) using Node.js, Express.js, Docker, and MySQL.</li>
+        <li>Implemented JWT auth, role-based authorization, SQS-backed async payment workflows, and automated email alerts via Amazon SES.</li>
+        <li>Automated the deployment matrix using Jenkins, ECR, and ECS Fargate behind an ALB, with CloudFront caching and Aiven/Render free tiers for cost efficiency.</li>
+      </ul>
+    </div>
+    <div class="spec-strip">
+      <span>ECS Fargate</span><span>RDS MySQL 8.4.7</span><span>SQS (async payments)</span>
+      <span>ALB path routing</span><span>CloudFront + Route 53 + ACM</span><span>4× ECR repos</span>
+      <span>Jenkins CI/CD</span><span>Vercel + Render + Aiven</span>
+    </div>
+  </div>
+</article>
 
-       </ul>
-          </div>
-          <div class="spec-strip">
-            <span>ECS Fargate</span><span>RDS MySQL 8.4.7</span><span>SQS (async payments)</span>
-            <span>ALB path routing</span><span>CloudFront + Route 53 + ACM</span><span>4× ECR repos</span>
-            <span>Jenkins CI/CD</span><span>Vercel + Render + Aiven (free-tier)</span>
-          </div>
-        </div>
-      </article>
+<!-- Focus Bubble -->
+<article class="case">
+  <div class="case-top">
+    <div class="case-flag"><span class="dot"></span> APPLICATION PROJECT — ANDROID</div>
+    <h3>Focus Bubble — a focus timer that survives being killed by the operating system</h3>
+    <p class="case-desc">
+      Designed and developed an Android productivity application using Kotlin and Clean Architecture. Implemented offline-first data persistence with Room Database and DataStore, secure Firebase Authentication, and lifecycle-aware state management to ensure uninterrupted user sessions during OS background resource collection.
+    </p>
+    <div class="case-links">
+      <a href="https://github.com" target="_blank">Frontend repo ↗</a>
+      <a href="https://github.com" target="_blank">Backend repo ↗</a>
+    </div>
+  </div>
+  <div class="case-body">
+    <div class="flow problem">
+      <h4>What I was solving for</h4>
+      <ul>
+        <li>Standard mobile timers lose state or reset progress when backgrounded or forcefully terminated by the OS aggressive memory management.</li>
+        <li>Needed a resilient, offline-first system to preserve session metrics, configurations, and state machines without relying on constant network coverage.</li>
+        <li>Wanted a clean, highly testable decoupled mobile architecture separating business rules from UI code.</li>
+      </ul>
+    </div>
+    <div class="flow decision">
+      <h4>What I built</h4>
+      <ul>
+        <li>Structured the core application using Kotlin and Clean Architecture principles (Presentation, Domain, and Data layers).</li>
+        <li>Engineered a reliable timer state machine backed by Room DB and DataStore for persistent local storage, synced with Firebase Auth.</li>
+        <li>Built comprehensive focus analytics, dashboard charts, and customizable study metrics into a modular codebase.</li>
+      </ul>
+    </div>
+    <div class="spec-strip">
+      <span>Kotlin</span><span>Clean Architecture</span><span>Room</span><span>DataStore</span><span>Firebase Auth</span>
+    </div>
+  </div>
+</article>
 
-      <!-- Focus Bubble -->
-      <article class="case">
-        <div class="case-top">
-          <div class="case-flag"><span class="dot"></span> APPLICATION PROJECT — ANDROID</div>
-          <h3>Focus Bubble — a focus timer that survives being killed by the OS</h3>
-          <p class="case-desc">
-            Designed and developed an Android productivity application using Kotlin and Clean Architecture to help users stay focused through customizable study sessions. Implemented offline-first data persistence with Room Database and DataStore, secure Firebase Authentication, and lifecycle-aware timer management to ensure uninterrupted focus sessions even during app restarts or network interruptions.
-          </p>
-          <div class="case-links">
-            <a href="https://github.com/rozanaim2026/Focusbubble-Frontend" target="_blank">Frontend repo ↗</a>
-            <a href="https://github.com/rozanaim2026/Focusbubble-Backend" target="_blank">Backend repo ↗</a>
-          </div>
-        </div>
-        <div class="case-body">
-          <div class="flow problem">
-            <h4>What I was solving for</h4>
-            <ul>
-              <li>Existing timer applications often lose progress when the app is backgrounded, the device restarts, or the operating system terminates the application.</li>
+<!-- Tetris -->
+<article class="case">
+  <div class="case-top">
+    <div class="case-flag"><span class="dot"></span> LEARNING PROJECT — SECURITY-FIRST DELIVERY</div>
+    <h3>Tetris on the Cloud — putting shift-left security gates before the deployment</h3>
+    <p class="case-desc">
+      Designed and implemented a comprehensive DevSecOps CI/CD pipeline for deploying a containerized Tetris application on Amazon EKS. Automated infrastructure provisioning using Terraform, vulnerability scanning, and GitOps-driven application synchronization.
+    </p>
+    <div class="case-links">
+      <a href="https://github.com" target="_blank">View repository ↗</a>
+    </div>
+  </div>
+  <div class="case-body">
+    <div class="flow problem">
+      <h4>What I was solving for</h4>
+      <ul>
+        <li>Pipelines often isolate speed from security, resulting in manually bypassed gates, untracked image vulnerabilities, or configuration drift.</li>
+        <li>Manual cloud console operations create configuration drift between active deployments and repository manifests.</li>
+      </ul>
+    </div>
+    <div class="flow decision">
+      <h4>What I built</h4>
+      <ul>
+        <li>Declared and provisioned the Amazon EKS cluster and VPC entirely within reusable Terraform modules to eliminate infrastructure drift.</li>
+        <li>Chained SonarQube quality gates, OWASP Dependency-Check, and Trivy image scanning into a unified Jenkins pipeline.</li>
+        <li>Configured GitOps delivery with ArgoCD to achieve continuous automated reconciliation of cluster states against Git.</li>
+      </ul>
+    </div>
+    <div class="spec-strip">
+      <span>Terraform</span><span>EKS</span><span>Jenkins</span><span>SonarQube</span><span>Trivy</span><span>OWASP DC</span><span>ArgoCD</span>
+    </div>
+  </div>
+</article>
 
-              <li>Needed an offline-first solution that could reliably preserve focus sessions, user preferences, and authentication without depending on continuous internet connectivity.</li>
+<!-- Netflix -->
+<article class="case">
+  <div class="case-top">
+    <div class="case-flag"><span class="dot"></span> LEARNING PROJECT — OBSERVABILITY</div>
+    <h3>Netflix Clone DevSecOps — building pipelines with real-time issue detection</h3>
+    <p class="case-desc">
+      Engineered a dual-target (EC2 + EKS) DevSecOps pipeline featuring automated security policies and high-fidelity observability stacks.
+    </p>
+    <div class="case-links">
+      <a href="https://github.com/rozanaim2026/netflix-devsecops" target="_blank">View repository ↗</a>
+    </div>
+  </div>
+  <div class="case-body">
+    <div class="flow problem">
+      <h4>What I was solving for</h4>
+      <ul>
+        <li>Standard CI/CD paths lack post-deployment confirmation, rendering runtime anomalies like memory leaks or container silent crashes completely invisible.</li>
+      </ul>
+    </div>
+    <div class="flow decision">
+      <h4>What I built</h4>
+      <ul>
+        <li>Integrated shift-left Trivy security checks targeting multi-environment builds across individual EC2 instances and Kubernetes namespaces.</li>
+        <li>Deployed Prometheus metrics scrapers and Grafana dashboards for cluster observability, linking Alertmanager directly to Slack.</li>
+        <li>Leveraged ArgoCD controllers to manage self-healing deployments and automated rollbacks on target EKS clusters.</li>
+      </ul>
+    </div>
+    <div class="spec-strip">
+      <span>EC2 + EKS</span><span>Trivy</span><span>ArgoCD</span><span>Prometheus</span><span>Grafana</span><span>Slack alerting</span>
+    </div>
+  </div>
+</article>
 
-              <li>Wanted a clean and maintainable Android architecture that separates business logic from the user interface for easier testing and future feature development.</li>
-            </ul>
-          </div>
-          <div class="flow decision">
-            <h4>What I built</h4>
-            <ul>
-              <li>Developed the application using Kotlin and Clean Architecture with separate presentation, domain, and data layers.</li>
-              <li>Built a timer state machine backed by Room and DataStore for offline-first persistence, synced against Firebase Auth.</li>
-              <li>Added customizable study timers, session tracking, and persistent local storage while maintaining a modular and testable codebase.</li>
-            </ul>
-          </div>
-          <div class="spec-strip">
-            <span>Kotlin</span><span>Clean Architecture</span><span>Room</span><span>DataStore</span><span>Firebase Auth</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Tetris -->
-      <article class="case">
-        <div class="case-top">
-          <div class="case-flag"><span class="dot"></span> LEARNING PROJECT — SECURITY-FIRST DELIVERY</div>
-          <h3>Tetris on the Cloud — putting security gates before the deploy, not after</h3>
-          <p class="case-desc">
-Designed and implemented a complete DevSecOps CI/CD pipeline for deploying a containerized Tetris application on Amazon EKS. Automated infrastructure provisioning using Terraform, container image management with Docker, security scanning using SonarQube, Trivy, and OWASP Dependency Check, and GitOps-based Kubernetes deployments using ArgoCD.          </p>
-          <div class="case-links">
-            <a href="https://github.com/rozanaim2026/Tetris-Game-Deployment" target="_blank">View repository ↗</a>
-          </div>
-        </div>
-        <div class="case-body">
-          <div class="flow problem">
-            <h4>What I was solving for</h4>
-            <ul>
-              <li>Speed and safety usually get treated as opposites: fast pipelines skip scanning, safe pipelines get manual gates that people route around.</li>
-              <li>Manually clicking through cloud console setup drifts from whatever's actually in the repo within a week.</li>
-            </ul>
-          </div>
-          <div class="flow decision">
-            <h4>What I built</h4>
-            <ul>
-              <li>Declared the EKS cluster and VPC in Terraform, so "what infrastructure exists" is answerable by reading code, not the console.</li>
-              <li>Chained SonarQube (static analysis), OWASP Dependency-Check, and Trivy (image scanning) into the Jenkins pipeline as gates before deploy.</li>
-              <li>Handed off delivery to ArgoCD so the live cluster state is continuously reconciled against the Git manifests.</li>
-            </ul>
-          </div>
-          <div class="spec-strip">
-            <span>Terraform</span><span>EKS</span><span>Jenkins</span><span>SonarQube</span><span>Trivy</span><span>OWASP DC</span><span>ArgoCD</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Netflix -->
-      <article class="case">
-        <div class="case-top">
-          <div class="case-flag"><span class="dot"></span> LEARNING PROJECT — OBSERVABILITY</div>
-          <h3>Netflix Clone DevSecOps — building the pipeline that tells me something's wrong before a user does</h3>
-          <p class="case-desc">
-            A dual-target (EC2 + EKS) DevSecOps pipeline with full observability.
-          </p>
-          <div class="case-links">
-            <a href="https://github.com/rozanaim2026/netflix-devsecops" target="_blank">View repository ↗</a>
-          </div>
-        </div>
-        <div class="case-body">
-          <div class="flow problem">
-            <h4>What I was solving for</h4>
-            <ul>
-              <li>A pipeline that ends at "deployed" tells you nothing about whether the thing is actually working — memory creep, slow endpoints, and container drift are all invisible until someone complains.</li>
-            </ul>
-          </div>
-          <div class="flow decision">
-            <h4>What I built</h4>
-            <ul>
-              <li>Ran Trivy scans ahead of dual deploys to EC2 and EKS, so the same security gate covers both targets.</li>
-              <li>Put Prometheus and Grafana in front of the cluster for real metrics, and wired Alertmanager into Slack so I find out about a problem from a notification, not a support ticket.</li>
-              <li>Used ArgoCD for self-healing rollouts on the EKS side.</li>
-            </ul>
-          </div>
-          <div class="spec-strip">
-            <span>EC2 + EKS</span><span>Trivy</span><span>ArgoCD</span><span>Prometheus</span><span>Grafana</span><span>Slack alerting</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Cloud Conductor -->
-      <article class="case">
-        <div class="case-top">
-          <div class="case-flag"><span class="dot"></span> LEARNING PROJECT — MULTI-SERVICE RBAC</div>
-          <h3>Cloud Conductor — least-privilege access across ten services, not one</h3>
-          <p class="case-desc">
-            A 10-microservice EKS platform with per-service RBAC and webhook-triggered CI/CD.
-          </p>
-          <div class="case-links">
-            <a href="https://github.com/rozanaim2026/Cloud-Conductor-10-Microservices" target="_blank">View repository ↗</a>
-          </div>
-        </div>
-        <div class="case-body">
-          <div class="flow problem">
-            <h4>What I was solving for</h4>
-            <ul>
-              <li>The more services share a cluster, the easier it is to default everything to broad permissions just to stop debugging access errors — which is exactly how one compromised service becomes a cluster-wide incident.</li>
-            </ul>
-          </div>
-          <div class="flow decision">
-            <h4>What I built</h4>
-            <ul>
-              <li>Scoped Kubernetes RBAC per service — dedicated ServiceAccounts, Roles, and RoleBindings, tied to AWS IAM through OIDC rather than shared cluster-admin credentials.</li>
-              <li>Triggered a multibranch Jenkins pipeline off GitHub webhooks so each service builds and deploys independently.</li>
-              <li>Scripted cluster and node-group setup with <code>eksctl</code> and Bash to keep provisioning repeatable.</li>
-            </ul>
+<!-- Cloud Conductor -->
+<article class="case">
+  <div class="case-top">
+    <div class="case-flag"><span class="dot"></span> LEARNING PROJECT — MULTI-SERVICE RBAC</div>
+    <h3>Cloud Conductor — executing least-privilege security boundaries across scale</h3>
+    <p class="case-desc">
+      A 10-microservice EKS orchestration platform managing strict per-service RBAC patterns and dynamic multi-branch automated builds.
+    </p>
+    <div class="case-links">
+      <a href="https://github.com/rozanaim2026/Cloud-Conductor-10-Microservices" target="_blank">View repository ↗</a>
+    </div>
+  </div>
+  <div class="case-body">
+    <div class="flow problem">
+      <h4>What I was solving for</h4>
+      <ul>
+        <li>Multi-tenant clusters frequently over-provision generic administrator roles to speed up debugging, expanding attack surfaces.</li>
+      </ul>
+    </div>
+    <div class="flow decision">
+      <h4>What I built</h4>
+      <ul>
+        <li>Enforced granular Kubernetes RBAC definitions linked to isolated AWS IAM policies via IRSA (IAM Roles for Service Accounts) OIDC providers.</li>
+        <li>Implemented multi-branch Jenkins automation hooked into GitHub webhooks for autonomous, decoupled microservice builds.</li>
+</ul>
           </div>
           <div class="spec-strip">
             <span>EKS</span><span>Kubernetes RBAC</span><span>IAM OIDC</span><span>Jenkins multibranch</span><span>eksctl</span>
